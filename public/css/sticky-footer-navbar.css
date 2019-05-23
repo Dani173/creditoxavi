@@ -206,11 +206,22 @@ ul li {display:inline-block;}
     top:1px;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
 footer {
+
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70px; //same height as the margin to the bottom of the body
+    height: 40px;
+ 
 }
 
 #debajo {
@@ -635,12 +646,12 @@ fieldset.radioEmpty input:focus{
 
 }
 #fondoreg{
-    background-image: url('../../../calidaw3/blog/public/Imagenes/image.png');
+    background-image: url('../Imagenes/imagenRegistro.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100%;
-    margin-top: 100px;
+    height: 500px;
+
 }
 
 .reg-form {
@@ -710,5 +721,14 @@ fieldset.radioEmpty input:focus{
     width: 33%;
     float: left;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+.exerciseimg {
+    width: 100px;
+    height: 200px;
+}
+
+#margin-reg {
+    padding-top: 60px;
 }
