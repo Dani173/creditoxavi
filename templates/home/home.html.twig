@@ -4,6 +4,13 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 {% endblock %}
 {% block body %}
-    <h1>Inicio</h1>
-    <p>Bienvenido {% if app.user is null %}al blog de Xavi, <br></n>puedes empezar creando tu usuario o iniciando sesion{% endif %} {% if app.user is not null %}{{ app.user.username }}{% endif %}</p>
+    <div class="bloque1"><p id="titulo">CALISTENIA</p>
+        <p id="subtitulo">COMIENZA TU CAMBIO</p>
+        <p id="texto">Los planes de entrenamiento online serán diseñados de manera personalizada
+            para cada uno de los que nos pidáis asesoramiento on-line a través de esta web,
+            siempre con el respaldo de todosnuestros expertos.</p>
+        <p><a href="#" class="myButton">Logra tu Asesoramiento</a></p></div>
+    <div class="bloque2">
+        <img id="imageninicio" src="Imagenes/Asesoramiento-Inicio.jpg" alt="tio" />
+    </div>
 {% endblock %}

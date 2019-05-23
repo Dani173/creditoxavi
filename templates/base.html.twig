@@ -19,7 +19,7 @@
             <li id="focus"><a class="letra-menu separacion" href="{{ path('muscle') }}">Ejercicios</a></li>
             <li><a class="letra-menu separacion" href="{{ path('app_level') }}">Rutinas</a></li>
             <li><a class="letra-menu separacion" href="{{ path('nutrition') }}">Nutrición</a></li>
-            <li><a class="letra-menu separacion" href="#slide-four">Tienda</a></li>
+            <li><a class="letra-menu separacion" href="#slide-four">Asesoramiento</a></li>
         </ul>
     </div>
     <div id="menud">
@@ -39,11 +39,11 @@
         <a id="reg-button" class="registro" href="{{ path('app_register') }}" >Registrarse</a>
     </div>
     {% else %}
-        <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+        <a class="nav-link" href="{{ path('app_logout') }}">Salir</a>
 
     {% endif %}
 </div>
-</div>
+
 
 {% block body %}{% endblock %}
 <script  src="js/index.js"></script>

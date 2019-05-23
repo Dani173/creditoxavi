@@ -3,13 +3,14 @@
 {% block title %}Hello ExerciseController!{% endblock %}
 
 {% block body %}
-
+    <p id="subtitulo">Ejercicios por grupos musculares</p>
     {% for musclegroups in musclegroup %}
+
         <div class="container">
 
-            <div class="titulo">
+            <div>
 
-                <a href="{{ path('exercisemuscle',{'id':musclegroups.id} )}}"><h1>{{ musclegroups.name }}</h1></a>
+                <a href="{{ path('exercisemuscle',{'id':musclegroups.id} )}}"><h1 class="tituloej">{{ musclegroups.name }}</h1></a>
                 <img src="{{ musclegroups.img }}" style="height: 100px;">
 
                 </body>

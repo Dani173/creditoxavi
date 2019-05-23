@@ -342,8 +342,10 @@ button:focus {
 }
 
 .container {
-    width: 300px;
-    margin: 0px auto 0;
+    float: left;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-right: 100px;
 }
 
 
@@ -692,4 +694,21 @@ fieldset.radioEmpty input:focus{
 
 #almilialeregalaronelcredito{
     margin-left: 200px;
+}
+
+.exercisebloque {
+    width: 20%;
+    float: left;
+}
+
+.tituloej{
+    text-decoration: none;
+    color: #E5E5E5;
+}
+
+#rutinabloque {
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin-top: 100px;
 }

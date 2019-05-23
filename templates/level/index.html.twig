@@ -3,8 +3,9 @@
 {% block title %}Level{% endblock %}
 
 {% block body %}
+    <p id="subtitulo">Rutina por Niveles</p>
     {% for level in levels %}
-
+        <div id="rutinabloque">
 {% if  level.price  > 0 %}
 
         <a href="{{ path('level',{'id':level.id} )}}"><h1 style="color: red">{{ level.name }}</h1>
