@@ -21,7 +21,6 @@ class MuscleController extends AbstractController
             'musclegroup' => $musclegroups,
         ]);
     }
-
     /**
      * @Route("/muscle/{id}/show", name="exercisemuscle")
      */
@@ -42,4 +41,6 @@ class MuscleController extends AbstractController
 
         ]);
     }
+
+
 }

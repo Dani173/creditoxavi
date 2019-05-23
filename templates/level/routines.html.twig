@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExerciseController!{% endblock %}
+
+{% block body %}
+
+
+
+    {% for level in levels %}
+
+
+        <a ><h1>{{ level.name}}</h1></a>
+        <a ><h1>Series:{{ level.series}}Repeticiones:{{ level.repetitions}}</h1></a>
+
+
+
+        </div>
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}

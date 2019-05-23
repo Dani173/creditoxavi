@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExerciseController!{% endblock %}
+
+{% block body %}
+
+
+
+
+    {% for level in levels %}
+
+
+        <a href="{{ path('routine_exercises',{'id':level.id} )}}"><h1>{{ level.name}}</h1></a>
+
+        </div>
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}

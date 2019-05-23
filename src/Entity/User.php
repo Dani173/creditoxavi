@@ -77,10 +77,30 @@ class User implements UserInterface
     private $dateofbirth;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Level", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Level", inversedBy="user", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $level;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $surname;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
 
 
 
@@ -231,6 +251,54 @@ class User implements UserInterface
     public function getLevel(): Collection
     {
         return $this->level;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getPhone(): ?int
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?int $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getSurname(): ?string
+    {
+        return $this->surname;
+    }
+
+    public function setSurname(?string $surname): self
+    {
+        $this->surname = $surname;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?string $address): self
+    {
+        $this->address = $address;
+
+        return $this;
     }
 
 

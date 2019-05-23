@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="col-lg-4 box-form">
-        <h2>Register, please</h2>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" class="btn btn-success" value="Register">
-        {{ form_errors(form) }}
-        {{ form_end(form) }}
+    <div id="fondoreg">
+        <div id="registro" class="col-lg-4 box-form">
+            <h2 id="regtitulo">Registrate</h2>
+            <div class="reg-form">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <input type="submit" class="btn btn-success" value="Registrate">
+                {{ form_errors(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
     </div>
 {% endblock %}

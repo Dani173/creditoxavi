@@ -31,9 +31,10 @@ class UserController extends AbstractController
     {
 
         $user = new User();
-    $level=new Level();
-
+        $id=1;
+        $level= $this->getDoctrine()->getRepository(Level::class)->find($id);
         $user->setRoles(['ROLE_FREEUSER']);
+        $user->setLevel($level);
         $user->setIsActive(true);
 
         $form = $this->createForm(UserType::class, $user);
@@ -52,6 +53,7 @@ class UserController extends AbstractController
             $this->addFlash(
                 'success', 'User created'
             );
+
             return $this->redirectToRoute('app_homepage');
         }
 

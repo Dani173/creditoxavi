@@ -5,12 +5,12 @@
 {% block body %}
     {% for level in levels %}
 
-{% if {{ level.price }} == 0 %}
+{% if  level.price  > 0 %}
 
-        <a ><h1 style="color: red">{{ level.name }}</h1>
+        <a href="{{ path('level',{'id':level.id} )}}"><h1 style="color: red">{{ level.name }}</h1>
             <h2 style="color: red">{{ level.price }}€</h2></a>
         {% else %}
-            <a ><h1>{{  level.name }}</h1>
+            <a  href="{{ path('level',{'id':level.id} )}}"><h1>{{  level.name }}</h1>
                 <h2>{{ level.price }}€</h2></a>
             {% endif %}
 

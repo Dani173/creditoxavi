@@ -5,8 +5,8 @@
     <title>{% block title %}CaliDAW{% endblock %}</title>
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/sticky-footer-navbar.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Rationale" rel="stylesheet">
     {% endblock %}
 
 </head>
@@ -18,15 +18,25 @@
     <div id="menum"><ul>
             <li id="focus"><a class="letra-menu separacion" href="{{ path('muscle') }}">Ejercicios</a></li>
             <li><a class="letra-menu separacion" href="{{ path('app_level') }}">Rutinas</a></li>
-            <li><a class="letra-menu separacion" href="#slide-four">Nutrición</a></li>
+            <li><a class="letra-menu separacion" href="{{ path('nutrition') }}">Nutrición</a></li>
             <li><a class="letra-menu separacion" href="#slide-four">Tienda</a></li>
         </ul>
-        {% if app.user is null %}
     </div>
     <div id="menud">
-        <a href="{{ path('app_login') }}">Iniciar Sesión</a>
+        {% if app.user is null %}
+        <button id="login-button" class="inicios" href="{{ path('app_login') }}">Iniciar Sesión</button>
+        <div class="login-container">
+            <form class="login-form" action="{{ path('app_login') }}" method="post">
 
-        <a href="{{ path('app_register') }}" >Registrarse</a>
+                <input type="text" placeholder="Email" id="email" name="_username" class="form-control"/>
+
+
+                <input type="password" placeholder="Contraseña" id="password" name="_password" class="form-control"/>
+
+                <button id="entrar" type="submit" class="btn btn-success">Ir</button>
+            </form>
+        </div>
+        <a id="reg-button" class="registro" href="{{ path('app_register') }}" >Registrarse</a>
     </div>
     {% else %}
         <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
@@ -41,11 +51,16 @@
 <script  src="js/indexx.js"></script>
 
 
+<footer><div id="debajo">
+        <ul>
+            <li><a class="letra-footer separacionfooter separacion" href="#slide-two">Facebook</a></li>
+            <li><a class="letra-footer separacion" href="#slide-three">Twitter</a></li>
+            <li><a class="letra-footer separacion" href="#slide-four">Pinterest</a></li>
+            <li><a class="letra-footer separacion" href="#slide-four">Instagram</a></li>
+            <li><a class="letra-footer separacion" href="#slide-four">Youtube</a></li>
+        </ul></div></footer>
+
 </div>
-
-
-
-
 
 
 </body>
